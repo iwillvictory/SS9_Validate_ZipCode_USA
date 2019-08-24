@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript function to check whether a given value is US zip code or not</title>
+</head>
+<body>
+    <script>
+        let zipCode ="03201-2150";
+        alert(is_usZipCode(zipCode));
+        zipCode ="7892";
+        alert(is_usZipCode(zipCode));
+
+        function is_usZipCode(str) {
+            let regexp = /^[0-9]{5}(-[0-9]{4})?$/;   // 12343-2342  ; 12324
+            return regexp.test(str);
+        }
+    </script>
+
+</body>
+</html>
